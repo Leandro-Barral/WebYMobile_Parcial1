@@ -1,8 +1,5 @@
-# React + Vite
+# Parcial 1 de Desarrollo Web y Mobile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este es el primer parcial de la materia Desarrollo Web y Mobile, en el que realizamos una aplicación de gestión de recetas, logré agregar el filtro por tipo y algo del modo oscuro, además de completar los requisitos funcionales básicos.
+Fecha: 16/10/2024
+Leandro Barral
