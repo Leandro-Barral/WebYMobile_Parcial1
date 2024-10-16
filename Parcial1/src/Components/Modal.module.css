@@ -36,17 +36,8 @@
     gap: 5px;
 }
 
-.inputText,
-.inputNumber {
+.inputText {
     width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-}
-
-.selectCategory {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;

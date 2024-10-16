@@ -8,20 +8,6 @@
       "preparation": "Extiende la masa, añade salsa de tomate, mozzarella y hornea."
     },
     {
-      "id": "4",
-      "name": "Sushi de Salmón",
-      "description": "Rollos de sushi rellenos de salmón fresco y aguacate.",
-      "type": "japonesa",
-      "preparation": "Enrolla arroz, salmón y aguacate en alga nori y corta."
-    },
-    {
-      "id": "6",
-      "name": "Pasta Alfredo",
-      "description": "Pasta con salsa cremosa de queso parmesano y ajo.",
-      "type": "italiana",
-      "preparation": "Cocina la pasta y mezcla con la salsa Alfredo."
-    },
-    {
       "id": "8",
       "name": "Curry de Garbanzos",
       "description": "Garbanzos en una rica salsa de curry y especias.",
@@ -48,6 +34,20 @@
       "description": "fsfsf",
       "type": "fsfsaas",
       "preparation": "afasf"
+    },
+    {
+      "id": "ac16",
+      "name": "hola",
+      "description": "chau",
+      "type": "7",
+      "preparation": "pasooooos"
+    },
+    {
+      "id": "f5f3",
+      "name": "dadada",
+      "description": "dsd",
+      "type": "dsd",
+      "preparation": "fdf"
     }
   ]
 }
