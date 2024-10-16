@@ -6,18 +6,18 @@ import { useState, useEffect } from "react";
 const RecipesPage = () => {
     const navigate = useNavigate();
     const { id } = useParams();
-    const [title, setTitle] = useState("");
+    const [name, setName] = useState("");
     const [description, setDescription] = useState("");
-    const [players, setPlayers] = useState("");
-    const [categories, setCategories] = useState("");
+    const [type, setType] = useState("");
+    const [preparation, setPreparation] = useState("");
     
     useEffect(() => {
         const fetchRecipe = async () => {
             const fetchedRecipe = await getRecipe(id);
-            setTitle(fetchedRecipe.title);
+            setName(fetchedRecipe.name);
             setDescription(fetchedRecipe.description);
-            setPlayers(fetchedRecipe.players);
-            setCategories(fetchedRecipe.categories);
+            setType(fetchedRecipe.type);
+            setPreparation(fetchedRecipe.preparation);
         };
         fetchRecipe();
     }, []);
@@ -25,10 +25,10 @@ const RecipesPage = () => {
     return(
         <>
             <button onClick={() => {navigate("/")}}>Atrás</button>
-            <div>Nombre: {title}</div>
+            <div>Nombre: {name}</div>
             <div>Descripcion: {description}</div>
-            <div>Cantidad de Jugadores: {players}</div>
-            <div>Categorías: {categories}</div>
+            <div>Tipo de Receta: {type}</div>
+            <div>Pasos: {preparation}</div>
         </>
     )
 }

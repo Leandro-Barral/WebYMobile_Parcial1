@@ -1,26 +1,27 @@
-import { postRecipe } from "../Services";
+import { postRecipe, getRecipes } from "../Services";
 import { useState } from "react";
 import styles from "./Modal.module.css"
 
 const Modal = ({ isOpen, setrecipes, close, title }) => {
 
-    const [recipeTitle, setRecipeTitle] = useState("");
+    const [recipeName, setRecipeName] = useState("");
     const [recipeDescription, setRecipeDescription] = useState("");
-    const [recipePlayers, setRecipePlayers] = useState(0);
-    const [recipeCategories, setRecipeCategories] = useState("");
+    const [recipeType, setRecipeType] = useState(0);
+    const [recipePreparation, setRecipePreparation] = useState("");
 
     const saveRecipe = async () => {
-        if (recipeTitle == "" || recipeDescription == "" || recipePlayers == "" || recipeCategories == "") {
+        if (recipeName == "" || recipeDescription == "" || recipeType == "" || recipePreparation == "") {
             alert("No se pudo guardar la receta porque hay campos inválidos");
         }
         else {
             const recipeData = {
-                title: recipeTitle,
+                name: recipeName,
                 description: recipeDescription,
-                players: recipePlayers.toString(),
-                categories: recipeCategories
+                type: recipeType.toString(),
+                preparation: recipePreparation
             }
-            setrecipes(await postRecipe(recipeData));
+            await postRecipe(recipeData)
+            setrecipes(await getRecipes());
             close();
         }
     }
@@ -38,7 +39,7 @@ const Modal = ({ isOpen, setrecipes, close, title }) => {
                                 type="text"
                                 className={styles.inputText}
                                 placeholder="Nombre de la Receta"
-                                onChange={(e) => setRecipeTitle(e.target.value)}
+                                onChange={(e) => setRecipeName(e.target.value)}
                             />
                         </div>
 
@@ -53,24 +54,23 @@ const Modal = ({ isOpen, setrecipes, close, title }) => {
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label>Cantidad de Participantes</label>
+                            <label>Tipo de Receta</label>
                             <input
-                                type="number"
-                                className={styles.inputNumber}
-                                onChange={(e) => setRecipePlayers(e.target.value)}
+                                type="text"
+                                className={styles.inputText}
+                                placeholder="Tipo de Receta"
+                                onChange={(e) => setRecipeType(e.target.value)}
                             />
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label>Categorías</label>
-                            <select
-                                className={styles.selectCategory}
-                                onChange={(e) => setRecipeCategories(e.target.value)}
-                            >
-                                <option value="Men">Men</option>
-                                <option value="Women">Women</option>
-                                <option value="Men / Women">Men / Women</option>
-                            </select>
+                            <label>Pasos</label>
+                            <input
+                                type="text"
+                                className={styles.inputText}
+                                placeholder="Pasos"
+                                onChange={(e) => setRecipePreparation(e.target.value)}
+                            />
                         </div>
 
                         <div className={styles.buttonGroup}>

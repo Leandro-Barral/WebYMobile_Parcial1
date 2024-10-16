@@ -6,8 +6,8 @@ const Recipe = ({ data, handleDelete }) => {
 
     return(
         <div className={styles.recipeContainer}>
-            <h3 className={styles.recipeTitle}>{data.title}</h3>
-            <button className={styles.btnDetails} onClick={() => {navigate("/recipe/" + data.id)}}>Detalles</button>
+            <h3 className={styles.recipeTitle}>{data.name}</h3>
+            <button className={styles.btnDetails} onClick={() => {navigate("/details/" + data.id)}}>Detalles</button>
             <button className={styles.btnDelete} onClick={handleDelete}>Borrar</button>
         </div>
     )

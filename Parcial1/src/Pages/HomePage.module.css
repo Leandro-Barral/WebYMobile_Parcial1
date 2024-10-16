@@ -4,24 +4,28 @@
     max-width: 800px;
 }
 
+.headerContainer{
+    display: flex;
+    justify-content:space-between;
+}
 
-.btnAgregarJuego {
+
+.btnAgregarReceta {
     background-color: #426fd9;
     color: white;
     border: none;
     border-radius: 12px;
     padding: 10px 20px;
     cursor: pointer;
-    margin-left: auto;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
-.btn-agregar-juego:hover {
+.btn-agregar-receta:hover {
     background-color: #1e3264;
 }
 
-.gamesContainer {
+.recipesContainer {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -33,29 +37,44 @@
     max-width: 100%;
 }
 
-.gamesContainer::-webkit-scrollbar {
+.recipesContainer::-webkit-scrollbar {
     height: 8px;
 }
 
-.gamesContainer::-webkit-scrollbar-thumb {
+.recipesContainer::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 4px;
 }
 
-.gamesContainer::-webkit-scrollbar-thumb:hover {
+.recipesContainer::-webkit-scrollbar-thumb:hover {
     background-color: #555;
 }
 
+.searchInput{
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 5px;
+}
+
 @media (max-width: 800px) {
-    .gamesContainer {
+    .recipesContainer {
         flex-wrap: wrap; 
         overflow-x: hidden; 
         height: auto; 
         justify-content: center;
     }
 
-    .btnAgregarJuego{
-        margin: auto;
+    .headerContainer{
+        flex-direction: column;
+    }
+
+    .searchInput,
+    .btnAgregarReceta{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

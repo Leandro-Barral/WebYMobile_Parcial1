@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000/api/dishes/";
+const URL = "http://localhost:3000/dishes/";
 
 export const getRecipes = async () => {
     const res =  await fetch(URL);
@@ -7,8 +7,7 @@ export const getRecipes = async () => {
 
 export const getRecipe = async (id) => {
     const res = await fetch(URL + id);
-    const recipeArray = await res.json();
-    return recipeArray[0];
+    return await res.json();
 }
 
 export const postRecipe = async (recipeData) => {
